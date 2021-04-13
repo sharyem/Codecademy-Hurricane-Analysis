@@ -69,7 +69,6 @@ def year_data (hurricane_data):
       # assigning the key, value data into the empty dict if it isn't already there
       hurricanes_by_year[current_year] = [current_hurricane_data]
     else: 
-# if it is already there, you want to add that hurricane's data as well (2 hurrs in same year), .append is used to ADD the data to the LIST item. You are not updating the dictionary
       hurricanes_by_year[current_year].append(current_hurricane_data)
   return hurricanes_by_year
 # print (year_data(hurricane_by_name))
@@ -77,36 +76,7 @@ def year_data (hurricane_data):
 
 # 4
 # Counting Damaged Areas
-# This one didn't work but it was close. Created a list of unique areas and then had a formula to zip it, just couldn't count it right
-# def affected_area_count (areas_affected):
-#   aff_area_dict = {}
-#   unique_areas = []
-#   for impacted in areas_affected: 
-#     for regions in impacted: 
-#       if regions not in unique_areas: 
-#         unique_areas.append(regions)
-#       else: 
-#         continue
-#   return unique_areas
-# unique_areas = affected_area_count(areas_affected)
-# print(unique_areas)
 
-
-# Couldn't get this part right, just kept returning 0
-# def count_area ():
-#   count_list = []
-#   for i in range(len(unique_areas)):
-#     count = areas_affected.count(unique_areas[i])
-#     count_list.append(count)
-#   return count_list
-# count_list = count_area()  
-# print(count_list)
-
-# The following dictionary part is ok
-# aff_area_dict = dict(zip(unique_areas, count_list))
-# print(aff_area_dict)  
-
-# Right answer: It's so simple...geez. 
 areas_count={}
 for regions_list in areas_affected:
     for region in regions_list:
